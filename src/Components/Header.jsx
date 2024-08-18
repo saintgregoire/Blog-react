@@ -11,7 +11,7 @@ function Header() {
         <li className='hover:font-bold cursor-pointer'>About us</li>
         <li className='hover:font-bold cursor-pointer'>Contact us</li>
       </ul>
-      <button className='bg-red-500 rounded-full text-white flex items-center py-2 px-3 hover:scale-110 transition-all duration-100 ease-in-out'>Subscribe <CiLinkedin className='ml-2 text-[20px]' /></button>
+      <a href='https://www.linkedin.com/in/maksym-voznichka/' target='_blank' className='bg-red-500 rounded-full text-white flex items-center py-2 px-3 hover:scale-110 transition-all duration-100 ease-in-out'>Subscribe <CiLinkedin className='ml-2 text-[20px]' /></a>
     </header>
   )
 }
