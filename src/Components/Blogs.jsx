@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import GlobalApi from '../Services/GlobalApi'
+import { useNavigate } from 'react-router-dom';
 
 function Blogs() {
 
@@ -27,10 +28,12 @@ function Blogs() {
     }
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className='flex flex-wrap justify-center gap-4 mt-12'>
       {post.map((item) => (
-        <article className='border-2 border-red-500 rounded-lg basis-[20%] p-4 hover:scale-110 hover:border-green-500 hover:rotate-[360deg] transition-all duration-500 ease-in-out' key={item.id}>
+        <article className='border-4 border-red-500 rounded-lg basis-[20%] p-4 hover:scale-110 hover:border-green-500 transition-all duration-500 ease-in-out hover:text-white hover:bg-gray-500 cursor-pointer' key={item.id} onClick={()=>navigate('blog-detail/' + item.id)}>
           <h2><strong>{item.name}</strong></h2>
           <p><strong>Gender:</strong> {item.gender}</p>
           <p><strong>Hair color: </strong>{item.hair_color}</p>
